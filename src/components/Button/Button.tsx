@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 import * as React from "react";
 import { MouseEventHandler } from "react";
+import { Button as ChakraButton } from "@chakra-ui/react";
 
 export interface ButtonProps {
   label?: string;
@@ -11,12 +12,12 @@ export interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   return (
-    <button
+    <ChakraButton
       onClick={props.onClick}
       sx={{ color: props.color, fontFamily: props.fontFamily }}
     >
       {props.label}
-    </button>
+    </ChakraButton>
   );
 };
 export default Button;
